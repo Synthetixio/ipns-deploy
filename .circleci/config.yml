@@ -3,7 +3,7 @@ version: 2.1
 parameters:
   node-version:
     type: string
-    default: "16.17.0"
+    default: '16.17.0'
 
 jobs:
   build:
@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: yarn install --immutable --immutable-cache
       - run: yarn dedupe --check
+      - run: yarn pretty:check
       - run: ./.circleci/install-ipfs.sh
       - run:
           command: ipfs daemon
@@ -31,8 +32,8 @@ jobs:
             IPFS_HOST: localhost
             IPFS_PORT: 5001
             IPFS_PROTOCOL: http
-            IPFS_USER: ""
-            IPFS_PASS: ""
+            IPFS_USER: ''
+            IPFS_PASS: ''
           command: node ./bin.mjs test-deploy-key $IPFS_CID
       - run: curl -L -v "http://127.0.0.1:8080/ipns/$IPNS_KEY"
       - run: curl -L -s "http://127.0.0.1:8080/ipns/$IPNS_KEY" | grep '<h1>Hello!</h1>'

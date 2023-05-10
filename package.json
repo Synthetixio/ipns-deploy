@@ -21,7 +21,10 @@
   "license": "MIT",
   "scripts": {
     "start": "DEBUG=ipns-deploy node ./bin.mjs",
-    "test-deploy": "ipfs-deploy ./test"
+    "test-deploy": "ipfs-deploy ./test",
+    "pretty": "prettier --write .",
+    "pretty:check": "prettier --check .",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "debug": "^4.3.4",
