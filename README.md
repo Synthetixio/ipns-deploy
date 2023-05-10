@@ -1,9 +1,8 @@
 # @synthetixio/ipns-deploy
 
-`ipns-deploy` is a command-line utility for publishing IPFS content identifiers (CIDs) to IPNS keys. It is designed to work in conjunction with `ipfs-deploy`, which uploads files and returns the corresponding CID. 
+`ipns-deploy` is a command-line utility for publishing IPFS content identifiers (CIDs) to IPNS keys. It is designed to work in conjunction with `ipfs-deploy`, which uploads files and returns the corresponding CID.
 
 By using `ipns-deploy` together with `ipfs-deploy`, you can publish your uploaded files' CID to an IPNS key, making it easier to manage and share your content on IPFS.
-
 
 ## Install
 
@@ -46,31 +45,26 @@ DEBUG=ipns-deploy ipns-deploy "staking.synthetix.eth" QmXyZaBc1234567890
 
 If the IPNS key was not added to the IPFS server it needs to be added first.
 
-*NOTE*: This needs to be executed on the remote IPFS Cluster server
+_NOTE_: This needs to be executed on the remote IPFS Cluster server
 
-1. Generate PEM PKCS8 key
+1. Generate new key
 
-    ```sh
-    openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out staking.synthetix.eth -outform PEM
-    ```
-
-2. Import the key
-
-    ```sh
-   ipfs key import staking.synthetix.eth --format=pem-pkcs8-cleartext staking.synthetix.eth
-   
+   ```sh
+   ipfs key gen --type=rsa --size=2048 staking.synthetix.eth
    # This returns the key ID (IPNS name)
    # k2k4r8jvf8qlg4ytq7y3ta749vkjzms0hisd9i92ohk0lsp0yestbhy3
    ```
 
-3. Check all the keys added
+2. Check all the keys added
 
-    ```sh
-   ipfs key list
+   ```sh
+   ipfs key list -l
+   # ...
+   # k2k4r8jvf8qlg4ytq7y3ta749vkjzms0hisd9i92ohk0lsp0yestbhy3       staking.synthetix.eth
    ```
 
-4. Check the IPNS URL can be resolved
+3. Check the IPNS URL can be resolved
 
-    ```sh
+   ```sh
    curl http://k2k4r8jvf8qlg4ytq7y3ta749vkjzms0hisd9i92ohk0lsp0yestbhy3.ipns.localhost:8080/
    ```
