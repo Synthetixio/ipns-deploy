@@ -174,32 +174,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noisekit/ipfs-deploy@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@noisekit/ipfs-deploy@npm:1.0.3"
-  dependencies:
-    debug: ^4.3.4
-    dotenv: ^16.0.3
-    ipfs-http-client: ^60.0.0
-  bin:
-    ipfs-deploy: bin.mjs
-  checksum: 14a871767621560caee1a7882dd42e11f45bb95662aa709bb06b9f141099160457fc43687b489a2a892669b9cada3b077159186c1c4596b50c616624dcc64bc6
-  languageName: node
-  linkType: hard
-
-"@synthetixio/ipns-deploy@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@synthetixio/ipns-deploy@workspace:."
-  dependencies:
-    "@noisekit/ipfs-deploy": ^1.0.3
-    debug: ^4.3.4
-    dotenv: ^16.0.3
-    ipfs-http-client: ^60.0.0
-  bin:
-    ipns-deploy: bin.mjs
-  languageName: unknown
-  linkType: soft
-
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2"
@@ -272,6 +246,32 @@ __metadata:
   checksum: f9bf3163d13aaa3b6f5e6fbf37a116e094ea021c0e1f2a7ccd0e12a29e2ce08dafba4e8b36e13f8ed7397e1591610ce880ed1289af4d66cf4ace8a36a9557278
   languageName: node
   linkType: hard
+
+"@synthetixio/ipfs-deploy@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@synthetixio/ipfs-deploy@npm:1.0.5"
+  dependencies:
+    debug: ^4.3.4
+    dotenv: ^16.0.3
+    ipfs-http-client: ^60.0.0
+  bin:
+    ipfs-deploy: bin.mjs
+  checksum: 4086becc72bca6a6e0096d102892812c8a06841e261a77f60dbb51587dba453bcb34648af511b63bde8f47451c43cfe1f6f941f3690d44fc3c2ef260886762ee
+  languageName: node
+  linkType: hard
+
+"@synthetixio/ipns-deploy@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@synthetixio/ipns-deploy@workspace:."
+  dependencies:
+    "@synthetixio/ipfs-deploy": ^1.0.5
+    debug: ^4.3.4
+    dotenv: ^16.0.3
+    ipfs-http-client: ^60.0.0
+  bin:
+    ipns-deploy: bin.mjs
+  languageName: unknown
+  linkType: soft
 
 "@types/minimatch@npm:^3.0.4":
   version: 3.0.5

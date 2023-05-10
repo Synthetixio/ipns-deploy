@@ -29,7 +29,7 @@
     "ipfs-http-client": "^60.0.0"
   },
   "devDependencies": {
-    "@noisekit/ipfs-deploy": "^1.0.3"
+    "@synthetixio/ipfs-deploy": "^1.0.5"
   },
   "packageManager": "yarn@3.5.0"
 }
