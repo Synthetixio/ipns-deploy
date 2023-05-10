@@ -32,7 +32,8 @@
     "ipfs-http-client": "^60.0.0"
   },
   "devDependencies": {
-    "@synthetixio/ipfs-deploy": "^1.0.5"
+    "@synthetixio/ipfs-deploy": "^1.0.5",
+    "prettier": "^2.8.8"
   },
   "packageManager": "yarn@3.5.0"
 }
