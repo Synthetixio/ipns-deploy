@@ -1,5 +1,5 @@
 {
-  "name": "@noisekit/ipns-deploy",
+  "name": "@synthetixio/ipns-deploy",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -16,7 +16,7 @@
   ],
   "type": "module",
   "bin": "bin.mjs",
-  "repository": "noisekit/ipns-deploy",
+  "repository": "synthetixio/ipns-deploy",
   "author": "Noisekit <noisekit@proton.me>",
   "license": "MIT",
   "scripts": {

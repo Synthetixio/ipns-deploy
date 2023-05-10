@@ -187,9 +187,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noisekit/ipns-deploy@workspace:.":
+"@synthetixio/ipns-deploy@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@noisekit/ipns-deploy@workspace:."
+  resolution: "@synthetixio/ipns-deploy@workspace:."
   dependencies:
     "@noisekit/ipfs-deploy": ^1.0.3
     debug: ^4.3.4

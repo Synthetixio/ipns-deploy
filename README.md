@@ -1,4 +1,4 @@
-# ipns-deploy
+# @synthetixio/ipns-deploy
 
 `ipns-deploy` is a command-line utility for publishing IPFS content identifiers (CIDs) to IPNS keys. It is designed to work in conjunction with `ipfs-deploy`, which uploads files and returns the corresponding CID. 
 
@@ -8,7 +8,7 @@ By using `ipns-deploy` together with `ipfs-deploy`, you can publish your uploade
 ## Install
 
 ```sh
-npm install -g @noisekit/ipns-deploy
+npm install -g @synthetixio/ipns-deploy
 ```
 
 ## ENV
